@@ -121,8 +121,8 @@ class MainViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel(
         if(curps.isNotEmpty()){
             for (i in 0 until curps.size){
                 var curpArreglo=curps[i].chunked(16)
-                println("Rfc arreglo: "+curpArreglo)
-                println("RFC incompleto: "+curpIncomp)
+                println("Curp arreglo: "+curpArreglo)
+                println("Curp incompleto: "+curpIncomp)
                 if(curpArreglo[0]==curpIncomp){
                     existe=true
                     curpComp=curps[i]
@@ -145,7 +145,7 @@ class MainViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel(
         }
 
 
-
+        println("Curp: "+curpComp)
 
 
         savedStateHandle.set(RESULT_KEY,curpComp)
